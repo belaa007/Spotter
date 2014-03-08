@@ -5,6 +5,15 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotterDistributionService", "SpotterDistributionService\SpotterDistributionService.csproj", "{7E0BDD71-94AD-453C-95BD-A44BE4E20D74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotterDataTransferObject", "SpotterDataTransferObject\SpotterDataTransferObject.csproj", "{E2233A71-0097-40E8-98B3-166C8486F6F6}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SpotterDatabase", "SpotterDatabase\SpotterDatabase.sqlproj", "{15F8C81F-A3EF-4D99-BC5B-8E32548824B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python", "Python", "{4A411140-82BA-425D-A90E-94E7604297B1}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\fping-2.4b2-10.fc12.src.rpm = ..\..\..\..\Downloads\fping-2.4b2-10.fc12.src.rpm
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +24,16 @@ Global
 		{7E0BDD71-94AD-453C-95BD-A44BE4E20D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E0BDD71-94AD-453C-95BD-A44BE4E20D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E0BDD71-94AD-453C-95BD-A44BE4E20D74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2233A71-0097-40E8-98B3-166C8486F6F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2233A71-0097-40E8-98B3-166C8486F6F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2233A71-0097-40E8-98B3-166C8486F6F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2233A71-0097-40E8-98B3-166C8486F6F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F8C81F-A3EF-4D99-BC5B-8E32548824B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F8C81F-A3EF-4D99-BC5B-8E32548824B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F8C81F-A3EF-4D99-BC5B-8E32548824B8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{15F8C81F-A3EF-4D99-BC5B-8E32548824B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F8C81F-A3EF-4D99-BC5B-8E32548824B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F8C81F-A3EF-4D99-BC5B-8E32548824B8}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
