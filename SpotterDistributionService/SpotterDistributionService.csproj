@@ -118,6 +118,8 @@
       <DependentUpon>SpotterModel.edmx</DependentUpon>
       <LastGenOutput>SpotterModel.cs</LastGenOutput>
     </Content>
+    <Content Include="PythonRes\fping-2.4b2-10.fc12.src.rpm" />
+    <Content Include="PythonRes\spotter.py" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
