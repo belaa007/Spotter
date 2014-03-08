@@ -245,8 +245,9 @@ class UpdateTimer(threading.Thread):
 	def __init__(self):
 		super(UpdateTimer, self).__init__()
 		self.time=datetime.datetime.now()
+		self.shutdown= False
 	def run(self):
-		while 1:
+		while self.shutdown== False:
 			now = datetime.datetime.now()
 			delta = now-self.time
 			diff = delta.total_seconds()
