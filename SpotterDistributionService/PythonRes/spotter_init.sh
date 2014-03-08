@@ -18,11 +18,14 @@ sudo pip install cherrypy
 #download spotter
 wget https://raw.github.com/belaa007/Spotter/master/SpotterDistributionService/PythonRes/spotter.py
 
+#download config
+wget https://raw.github.com/belaa007/Spotter/master/SpotterDistributionService/PythonRes/config.txt
+
 #get hostname
-hostname > config
+hostname >> config.txt
 
 #get ip
-curl http://checkip.dyndns.org | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >> config
+curl http://checkip.dyndns.org | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >> config.txt
 
 #start spotter
 python spotter.py

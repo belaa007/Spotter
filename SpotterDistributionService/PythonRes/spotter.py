@@ -6,6 +6,8 @@ import time
 import sys
 import traceback
 import subprocess
+import urllib2
+import datetime
 from bottle import route, run, response
 from json import loads, dumps
 from random import shuffle
@@ -30,6 +32,10 @@ Dout = {}
 # pool
 
 Pool = []
+
+# frissitesi idokoz (s)
+
+freq = 900 #15 perc
 
 
 # Hibakezeles - uzenet
@@ -227,12 +233,37 @@ def single_fping(ips):
 
     return dumps(fping(ips))
 
+#######....SERVICE UPDATE LOGIC....######
+def update():
+	f = open('config.txt','r')
+	sv = f.readline()
+	hn = f.readline()
+	ip = f.readline()
+	urllib2.urlopen('http://'+sv+'/'+hn+'/'+ip).read()
 
+class UpdateTimer(threading.Thread):
+	def __init__(self):
+		super(UpdateTimer, self).__init__()
+		self.time=datetime.datetime.now()
+	def run(self):
+		while 1:
+			now = datetime.datetime.now()
+			delta = now-self.time
+			diff = delta.total_seconds()
+			if diff<freq:
+				time.sleep(freq-diff)
+			else:
+				update()
+				self.time=datetime.datetime.now()
+		
 
 #######....MAIN PROGRAM....######
 # szalak inditasa
 
 start_threads()
+
+timer = UpdateTimer()
+timer.start()
 
 # alkalmazas futtatasa
 

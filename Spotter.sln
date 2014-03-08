@@ -9,11 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotterDataTransferObject",
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SpotterDatabase", "SpotterDatabase\SpotterDatabase.sqlproj", "{15F8C81F-A3EF-4D99-BC5B-8E32548824B8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python", "Python", "{4A411140-82BA-425D-A90E-94E7604297B1}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Downloads\fping-2.4b2-10.fc12.src.rpm = ..\..\..\..\Downloads\fping-2.4b2-10.fc12.src.rpm
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

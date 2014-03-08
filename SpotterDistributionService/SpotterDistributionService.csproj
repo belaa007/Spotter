@@ -67,6 +67,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PythonRes\config.txt" />
     <Content Include="SpotterDistributionService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -120,6 +121,7 @@
     </Content>
     <Content Include="PythonRes\fping-2.4b2-10.fc12.src.rpm" />
     <Content Include="PythonRes\spotter.py" />
+    <Content Include="PythonRes\spotter_init.sh" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
