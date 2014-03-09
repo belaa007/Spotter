@@ -263,15 +263,15 @@ class UpdateTimer(threading.Thread):
 
 start_threads()
 
-#timer = UpdateTimer()
-#timer.start()
+timer = UpdateTimer()
+timer.start()
 
 # alkalmazas futtatasa
 
 run(host='0.0.0.0', port=8080, debug=True, server='cherrypy')
 
 # szalak leallitasa, ha kilepunk
-#timer.shutdown= True
+timer.shutdown= True
 stop_threads()
 
 
