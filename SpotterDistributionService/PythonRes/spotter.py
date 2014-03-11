@@ -179,13 +179,20 @@ def fping(ips):
 
     p1 = subprocess.Popen(array, stdout=subprocess.PIPE)
     (pings, err) = p1.communicate()
-    output = {}
+    #output={}
+	output = []
     pings_arr = pings.split('\n')
     for i in range(len(rv)):
+		tdict={}
         pings_line = pings_arr[i].split(' ')
-        output[pings_line[0]] = (pings_line[3])[1:]
-    print output
-    return output
+		tdict["ip"]=pings_line[0]
+		tdict["avg"]= (pings_line[3])[1:]
+        #output[pings_line[0]] = (pings_line[3])[1:]
+		output.append(tdict)
+	fdict={}
+	fdict["result"]=output
+    print fdict
+    return fdict
 
 
 ######....BOTTLE LOGIC....######
@@ -213,9 +220,14 @@ def thread_ping(ip):
 
     response.content_type = 'application/json'
 
-# visszateres JSON formatumban: "<atlag ms-ben>"
+# visszateres JSON formatumban: {"ip":"<ip>", "avg":"<atlag ms-ben>"}
+	
+	dict = {}
+	dict["ip"]=ip
+	dict["avg"]=get(qid)
 
-    return dumps(get(qid))
+    #return dumps(get(qid))
+	return dumps(dict)
 
 
 # tobb cim pingelese
@@ -229,7 +241,7 @@ def single_fping(ips):
 
     response.content_type = 'application/json'
 
-# a bemeno adatokra lefuttatott fping fuggveny eremenyenek visszaadasa standard json formatumban: {"<ip1>":"<ping1>", "<ip2>":"<ping2>",...} - szotar
+# a bemeno adatokra lefuttatott fping fuggveny eremenyenek visszaadasa standard json formatumban: [{"ip1":"<ip1>", "avg":"<atlag ms-ben>"},{"ip2":"<ip2>", "avg":"<atlag ms-ben>"}]
 
     return dumps(fping(ips))
 

@@ -42,11 +42,12 @@
   <ItemGroup>
     <Compile Include="FPingParameter.cs" />
     <Compile Include="FPingResult.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="PingParameter.cs" />
     <Compile Include="PingResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UpdateParameter.cs" />
-    <Compile Include="UpdateResult.cs" />
+    <Compile Include="PythonComm\FPingReply.cs" />
+    <Compile Include="PythonComm\PingReply.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

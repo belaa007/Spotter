@@ -18,7 +18,7 @@ namespace SpotterDistributionService
         public string Address { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-        public bool IsLive { get; set; }
         public Nullable<System.DateTime> LastCheckin { get; set; }
+        public string Name { get; set; }
     }
 }

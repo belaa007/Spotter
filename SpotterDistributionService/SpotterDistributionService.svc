@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SpotterDistributionService.Service1" CodeBehind="SpotterDistributionService.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SpotterDistributionService.SpotterDistributionService" CodeBehind="SpotterDistributionService.svc.cs" %>
