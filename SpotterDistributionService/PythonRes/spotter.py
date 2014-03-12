@@ -181,7 +181,7 @@ def fping(ips):
     p1 = subprocess.Popen(array, stdout=subprocess.PIPE)
     (pings, err) = p1.communicate()
     #output={}
-	output = []
+    output = []
     pings_arr = pings.split('\n')
     for i in range(len(rv)):
 		tdict={}
