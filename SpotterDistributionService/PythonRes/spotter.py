@@ -112,7 +112,8 @@ def stop_threads():
             if the_thread.isAlive():
                 continue
             else:
-                del Pool[index]  # kitoroljuk a
+                del Pool[index]  # kitoroljuk a poolbol
+				print "szall leallt!"
             break
 
 
@@ -266,10 +267,12 @@ class UpdateTimer(threading.Thread):
 			diff = delta.total_seconds()
 			if diff<freq:
 				time.sleep(freq-diff)
+				print "still waiting for update"
 			else:
 				update()
 				self.time=datetime.datetime.now()
-		
+				print "update"
+		print "shutdown"
 
 #######....MAIN PROGRAM....######
 # szalak inditasa
