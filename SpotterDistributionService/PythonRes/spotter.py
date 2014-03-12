@@ -113,7 +113,7 @@ def stop_threads():
                 continue
             else:
                 del Pool[index]  # kitoroljuk a poolbol
-		print "szall leallt!"
+                print "szall leallt!"
             break
 
 
