@@ -198,21 +198,22 @@ def fping(ips):
 ######....BOTTLE LOGIC....######
 
 # egy cim pingelese
-# bemeneti formatum: "<ip>"
-# pl: localhost:8080/ping/"gmail.com"
+# bemeneti formatum: "{"ip":"<ip>"}"
+# pl: localhost:8080/ping/{"ip":"gmail.com"}
 
 @route('/ping/<ip>')
 def thread_ping(ip):
 
 # cim konvertalasa
 
-    add = loads(ip)
+    param = loads(ip)
+	add=param["ip"]
 
 # id generalasa a cimhez
 
     qid = id(add)
 
-# pingelsi keres feladasa a poolba
+# pingelesi keres feladasa a poolba
 
     put(add, qid)
 
