@@ -186,12 +186,12 @@ def fping(ips):
     for i in range(len(rv)):
 		tdict={}
         pings_line = pings_arr[i].split(' ')
-		tdict["ip"]=pings_line[0]
-		tdict["avg"]= (pings_line[3])[1:]
+        tdict["ip"]=pings_line[0]
+        tdict["avg"]= (pings_line[3])[1:]
         #output[pings_line[0]] = (pings_line[3])[1:]
-		output.append(tdict)
-	fdict={}
-	fdict["result"]=output
+        output.append(tdict)
+    fdict={}
+    fdict["result"]=output
     print fdict
     return fdict
 
